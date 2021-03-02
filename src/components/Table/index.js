@@ -1,16 +1,17 @@
+/* eslint-disable no-undef */
 import React from "react";
 
-function Table({ employees }) {
-    
+function Table(props) {
+    const { employees } = props;
     return (
       <table className="table table-striped">
         <thead className="thead-dark">
           <tr>
             <th className="col" style={{width:"10%"}}>Image</th>
-            <th className="col" style={{width:"15%"}}>Name</th>
-            <th className="col" style={{width:"15%"}}>Phone</th>
-            <th className="col" style={{width:"20%"}}>Email</th>
-            <th className="col" style={{width:"15%"}}>Location</th>
+            <th className="col" style={{width:"15%"}} onClick={props.sortByName}>Name</th>
+            <th className="col" style={{width:"15%"}} onClick={props.sortByPhone}>Phone</th>
+            <th className="col" style={{width:"20%"}} onClick={props.sortByEmail}>Email</th>
+            <th className="col" style={{width:"15%"}} onClick={props.sortByLocation}>Location</th>
           </tr>
         </thead>
         <tbody>
