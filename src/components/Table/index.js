@@ -1,5 +1,5 @@
-/* eslint-disable no-undef */
 import React from "react";
+import "./style.css";
 
 function Table(props) {
     const { employees } = props;

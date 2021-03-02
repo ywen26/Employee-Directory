@@ -37,25 +37,23 @@ const Staff = () => {
   const sortByLocation = () => {
     const location = employees.sort((a, b) => (a.location.city > b.location.city ? 1 : -1));
     setEmployees([...location]);
-}
-
-
+  }
   
     
-      return (
-        <div>
-          <SearchForm />
-          <Container style={{ minHeight: "80%" }}>
-            <Table 
-              employees={employees}
-              sortByName={sortByName} 
-              sortByPhone={sortByPhone}
-              sortByEmail={sortByEmail}
-              sortByLocation={sortByLocation}
-            />
-          </Container>
-        </div>
-      );
+  return (
+    <div>
+      <SearchForm />
+      <Container style={{ minHeight: "80%" }}>
+        <Table 
+          employees={employees}
+          sortByName={sortByName} 
+          sortByPhone={sortByPhone}
+          sortByEmail={sortByEmail}
+          sortByLocation={sortByLocation}
+        />
+      </Container>
+    </div>
+);
 }
 
 export default Staff;
