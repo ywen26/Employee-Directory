@@ -22,6 +22,8 @@ The user should be able to:
 * Javascript
 * Node.js
 
+## Appearance and Functionality
+
 Below are the pages about how the application display and works:
 ![Demo](./public/img20-1.png)
 ![Demo](./public/img20-2.png)
