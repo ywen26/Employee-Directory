@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import Table from "../components/Table";
@@ -9,14 +7,15 @@ import SearchForm from "../components/SearchForm";
 const Staff = () => {
   const [list, setList] = useState([]);
   const [employees, setEmployees] = useState([]);
-  const [error, setError] = useState("");
+//   const [error, setError] = useState("");
   
   useEffect(() => {
     API.getEmployeesList()
       .then(res => {
         setEmployees([...res.data.results]);
+        setList([...res.data.results]);
       })
-      .catch(err => setError(err));
+      .catch(err => console.log(err));
   }, []);
 
   const sortByName = () => {
@@ -38,11 +37,30 @@ const Staff = () => {
     const location = employees.sort((a, b) => (a.location.city > b.location.city ? 1 : -1));
     setEmployees([...location]);
   }
-  
+
+  const handleInputChange = (event) => {
+    setEmployees(event.target.value);
+  }
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    // const value = event.target.value;
+    let filterName = list.filter((search) => 
+      `${search.name.first} ${search.name.last}`.toLowerCase().includes(
+          document.querySelector("#name").value.toLowerCase()
+      )
+    );
+    setEmployees([...filterName]);
+  }
+      
     
   return (
     <div>
-      <SearchForm />
+      <SearchForm 
+        handleFormSubmit={handleFormSubmit}
+        handleInputChange={handleInputChange}
+        // employees={list}
+      />
       <Container style={{ minHeight: "80%" }}>
         <Table 
           employees={employees}

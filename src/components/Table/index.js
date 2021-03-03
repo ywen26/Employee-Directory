@@ -15,20 +15,20 @@ function Table(props) {
           </tr>
         </thead>
         <tbody>
-          {employees.map(employee => (
-            <tr key={employee.login.uuid}>
-              <td className="align-middle">
-                <img src={employee.picture.medium} alt={`${employee.name.first} ${employee.name.last}`} />
-              </td>
-              <td>{employee.name.first} {employee.name.last}</td>
-              <td>{employee.phone}</td>
-              <td>{employee.email}</td>
-              <td>{employee.location.city}</td>
-            </tr>
-          ))}
+            {employees.map(employee => (
+                <tr key={employee.login.uuid}>
+                    <td className="align-middle">
+                        <img src={employee.picture.medium} alt={`${employee.name.first} ${employee.name.last}`} />
+                    </td>
+                    <td>{employee.name.first} {employee.name.last}</td>
+                    <td>{employee.phone}</td>
+                    <td>{employee.email}</td>
+                    <td>{employee.location.city}</td>
+                </tr>
+            ))}
         </tbody>
       </table>
     );
-  }
+}
 
 export default Table;
