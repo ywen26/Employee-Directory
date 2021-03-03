@@ -53,7 +53,6 @@ const Staff = () => {
     setEmployees([...filterName]);
   }
       
-    
   return (
     <div>
       <SearchForm 
@@ -62,6 +61,7 @@ const Staff = () => {
         // employees={list}
       />
       <Container style={{ minHeight: "80%" }}>
+        <h6>Click the table heading to sort by each category:</h6>
         <Table 
           employees={employees}
           sortByName={sortByName} 

@@ -3,11 +3,12 @@ import Hero from "../components/Hero";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
+import backgroundImage from "../images/bg.jpg";
 
 function About() {
   return (
     <div>
-      <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
+      <Hero backgroundImage={backgroundImage}>
         <h1>Personnel</h1>
         <h2>Find your colleagues here!</h2>
       </Hero>

@@ -3,7 +3,7 @@ import React from "react";
 function SearchForm(props) {
 //   const { employees } = props;
   return (
-    <form className="mt-4 ml-4" onChange={props.handleFormSubmit}>
+    <form className="mt-4 ml-4 pb-3" onChange={props.handleFormSubmit}>
       <div className="form-group">
         <label className="pl-1" htmlFor="name">Search by Name:</label>
         <div className="form-inline">
@@ -23,7 +23,7 @@ function SearchForm(props) {
           ))}
         </datalist> */}
           <button type="submit" className="btn btn-success">
-            Search
+            Reload
           </button>
         </div>
       </div>
