@@ -22,6 +22,12 @@ The user should be able to:
 * Javascript
 * Node.js
 
+Below are the pages about how the application display and works:
+![Demo](./public/img20-1.png)
+![Demo](./public/img20-2.png)
+
+Here is the deployed link of the application: [Employee Directory](https://personnel-directory.herokuapp.com/)
+
 ## URL Sources
 
 Feel free to check the application repository: [https://github.com/ywen26/Employee-Directory](https://github.com/ywen26/Employee-Directory)
