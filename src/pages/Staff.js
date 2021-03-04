@@ -7,7 +7,6 @@ import SearchForm from "../components/SearchForm";
 const Staff = () => {
   const [list, setList] = useState([]);
   const [employees, setEmployees] = useState([]);
-//   const [error, setError] = useState("");
   
   useEffect(() => {
     API.getEmployeesList()
@@ -44,7 +43,6 @@ const Staff = () => {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    // const value = event.target.value;
     let filterName = list.filter((search) => 
       `${search.name.first} ${search.name.last}`.toLowerCase().includes(
           document.querySelector("#name").value.toLowerCase()
@@ -58,7 +56,6 @@ const Staff = () => {
       <SearchForm 
         handleFormSubmit={handleFormSubmit}
         handleInputChange={handleInputChange}
-        // employees={list}
       />
       <Container style={{ minHeight: "80%" }}>
         <h6>Click the table heading to sort by each category:</h6>
