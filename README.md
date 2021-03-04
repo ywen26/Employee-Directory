@@ -28,7 +28,7 @@ Below are the pages about how the application display and works:
 ![Demo](./public/img20-1.png)
 ![Demo](./public/img20-2.png)
 
-Here is the deployed link of the application: [Employee Directory](https://personnel-directory.herokuapp.com/)
+Here is the deployed link of the application: [Employee Directory](https://ywen26.github.io/Employee-Directory/?employees=#/)
 
 ## URL Sources
 
