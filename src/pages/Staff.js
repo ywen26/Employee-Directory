@@ -17,21 +17,25 @@ const Staff = () => {
       .catch(err => console.log(err));
   }, []);
 
+  // function to sort employees by name
   const sortByName = () => {
       const name = employees.sort((a, b) => (a.name.first > b.name.first ? 1 : -1));
       setEmployees([...name]);
   }
 
+  // function to sort employees by phone number
   const sortByPhone = () => {
     const phone = employees.sort((a, b) => (a.phone > b.phone ? 1 : -1));
     setEmployees([...phone]);
   }
 
+  // function to sort employees by email
   const sortByEmail = () => {
     const email = employees.sort((a, b) => (a.email > b.email ? 1 : -1));
     setEmployees([...email]);
   }
 
+  // function to sort employees by location
   const sortByLocation = () => {
     const location = employees.sort((a, b) => (a.location.city > b.location.city ? 1 : -1));
     setEmployees([...location]);
@@ -41,6 +45,7 @@ const Staff = () => {
     setEmployees(event.target.value);
   }
 
+  // handle input to filter employees by names
   const handleFormSubmit = (event) => {
     event.preventDefault();
     let filterName = list.filter((search) => 

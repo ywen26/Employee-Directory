@@ -1,7 +1,6 @@
 import React from "react";
 
 function SearchForm(props) {
-//   const { employees } = props;
   return (
     <form className="mt-4 ml-4 pb-3" onChange={props.handleFormSubmit}>
       <div className="form-group">
@@ -17,11 +16,6 @@ function SearchForm(props) {
             placeholder="Name"
             id="name"
           />
-        {/* <datalist id="names">
-          {employees.map(employee => (
-            <option value={`${employee.name.first} ${employee.name.last}`} key={employee.login.uuid} />
-          ))}
-        </datalist> */}
           <button type="submit" className="btn btn-success">
             Reload
           </button>
